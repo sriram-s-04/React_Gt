@@ -9,7 +9,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Routing from './Training/Routing';
 import UseLocationHook from './Training/UseLocationHook';
 import UseParamsHook from './Training/UseParamsHook';
-import Form from './Tasks_sri/Form_26_05';
+import Form from './Training/Form_26_05';
+import Form_usingState from './Tasks_sri/Form_usingState';
 function App() {
   return (
     <div className="App">
@@ -29,6 +30,7 @@ function App() {
         <Route path='/UseParamsHook/:id/:name' element={<UseParamsHook />}></Route>
         <Route path='/Useparamshook' element={<UseParamsHook />}></Route>
         <Route path='/Form' element={<Form />}></Route>
+        <Route path = "/Form_usingState" element={<Form_usingState/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>
