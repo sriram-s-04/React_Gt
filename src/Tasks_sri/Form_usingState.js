@@ -15,9 +15,21 @@ const Form_usingState = () => {
             [name]: value
         });
     }
+
+    let data = localStorage.getItem("formData")
+    console.log(data);
+    let parsed_data = JSON.parse(data)
+
+
+    
     const handleSubmits = (e) => {
         e.preventDefault();
         console.log(formData);
+        localStorage.setItem('formData', JSON.stringify(formData));
+        sessionStorage.setItem("userData", JSON.stringify(formData))
+        localStorage.setItem("isActive",true)
+        localStorage.setItem("user_id",1234)
+
     }
 
   return (
@@ -37,14 +49,14 @@ const Form_usingState = () => {
             <Form.Control type="email" placeholder="Enter email" name='email' onChange={handleChange} />
         </div>
       </Form.Group>
-      <Form.Group className="mb-3">
-        <Form.Label>Gender</Form.Label>
-        <Form.Select name='gender'  onChange={handleChange} >
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-          <option value="O">Other</option>
-        </Form.Select>
-      </Form.Group>
+        <Form.Group className="mb-3">
+            <Form.Label>Gender</Form.Label>
+            <Form.Select name='gender'  onChange={handleChange} >
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="O">Other</option>
+            </Form.Select>
+        </Form.Group>
         < Form.Group className="mb-3">
         <Form.Label>Hobbies</Form.Label>
         <Form.Check type="radio" label="Reading" name="hobby" value="Reading" onChange={handleChange} />
@@ -55,6 +67,9 @@ const Form_usingState = () => {
       </Form.Group>
       <Button type='submit'>submit</Button>
       </Form>
+      <Button onClick={() => localStorage.removeItem("isActive")}>Logout</Button>
+      <Button onClick={() => localStorage.clear()}>Logout</Button>
+      {parsed_data.fristname}
     </>
   )
 }

@@ -11,14 +11,19 @@ import UseLocationHook from './Training/UseLocationHook';
 import UseParamsHook from './Training/UseParamsHook';
 import Form from './Training/Form_26_05';
 import Form_usingState from './Tasks_sri/Form_usingState';
+import Form_clone from './Tasks_sri/Date_26_05/Form';
+import { Nav_details } from './Tasks_sri/Date_26_05/Nav_details';
+import FormValidation from './Training/FormValidation';
+
 function App() {
   return (
-    <div className="App">
+    <div >
       {/* <Day/> */}
       {/* <PropsComp /> */}
       {/* <Date_23_05 /> */}
     {/* <UseStateHook />       */}
     {/* <Usestate /> */}
+    {<FormValidation />}
     <BrowserRouter>
       <Routes>
         <Route path='' element={<Routing />}></Route>
@@ -31,6 +36,8 @@ function App() {
         <Route path='/Useparamshook' element={<UseParamsHook />}></Route>
         <Route path='/Form' element={<Form />}></Route>
         <Route path = "/Form_usingState" element={<Form_usingState/>}></Route>
+        <Route path='/Form_clone' element={<Form_clone />}></Route>
+        <Route path='/Nav_details/:Name/:email/:phonenumber/:collegeName/:collegeState/:graduationYear/:reactNativeExperience/:javascriptExperience' element={<Nav_details/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>
