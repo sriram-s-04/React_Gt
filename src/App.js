@@ -3,7 +3,6 @@ import './App.css';
 import Day from './Tasks_sri/Day';
 import PropsComp from './Training/PropsComp';
 import Date_23_05 from './Tasks_sri/Date_23_05/Date_23_05';
-import UseStateHook from './Training/UseStateHook';
 import { Usestate } from './Tasks_sri/Date_23_05/Usestate';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Routing from './Training/Routing';
@@ -13,7 +12,9 @@ import Form from './Training/Form_26_05';
 import Form_usingState from './Tasks_sri/Form_usingState';
 import Form_clone from './Tasks_sri/Date_26_05/Form';
 import { Nav_details } from './Tasks_sri/Date_26_05/Nav_details';
-import FormValidation from './Training/FormValidation';
+import Login from './Tasks_sri/Date_29_05/Login';
+import Formusing_local_session from './Tasks_sri/Date_29_05/Formusing_local_session';
+import Home from './Tasks_sri/Date_29_05/Home';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
       {/* <Date_23_05 /> */}
     {/* <UseStateHook />       */}
     {/* <Usestate /> */}
-    {<FormValidation />}
+    {/* {<FormValidation />} */}
     <BrowserRouter>
       <Routes>
         <Route path='' element={<Routing />}></Route>
@@ -38,9 +39,12 @@ function App() {
         <Route path = "/Form_usingState" element={<Form_usingState/>}></Route>
         <Route path='/Form_clone' element={<Form_clone />}></Route>
         <Route path='/Nav_details/:Name/:email/:phonenumber/:collegeName/:collegeState/:graduationYear/:reactNativeExperience/:javascriptExperience' element={<Nav_details/>}></Route>
+        <Route path='/Formusing_local_session' element={<Formusing_local_session/>}></Route>
+          <Route path='/Login' element={<Login />}></Route>
+          <Route path='/Home' element={<Home/>}></Route>
       </Routes>
     </BrowserRouter>
-    </div>
+    </div>  
     
   );
 } 
