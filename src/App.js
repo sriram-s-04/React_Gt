@@ -1,34 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-import Day from './Tasks_sri/Day';
-import PropsComp from './Training/PropsComp';
-import Date_23_05 from './Tasks_sri/Date_23_05/Date_23_05';
-import { Usestate } from './Tasks_sri/Date_23_05/Usestate';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Routing from './Training/Routing';
-import UseLocationHook from './Training/UseLocationHook';
-import UseParamsHook from './Training/UseParamsHook';
-import Form from './Training/Form_26_05';
-import Form_usingState from './Tasks_sri/Form_usingState';
-import Form_clone from './Tasks_sri/Date_26_05/Form';
-import { Nav_details } from './Tasks_sri/Date_26_05/Nav_details';
-import Login from './Tasks_sri/Date_29_05/Login';
-import Formusing_local_session from './Tasks_sri/Date_29_05/Formusing_local_session';
-import Home from './Tasks_sri/Date_29_05/Home';
+import logo from "./logo.svg";
+import "./App.css";
+import Day from "./Tasks_sri/Day";
+import PropsComp from "./Training/PropsComp";
+import Date_23_05 from "./Tasks_sri/Date_23_05/Date_23_05";
+import { Usestate } from "./Tasks_sri/Date_23_05/Usestate";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Routing from "./Training/Routing";
+import UseLocationHook from "./Training/UseLocationHook";
+import UseParamsHook from "./Training/UseParamsHook";
+import Form from "./Training/Form_26_05";
+import Form_usingState from "./Tasks_sri/Form_usingState";
+import Form_clone from "./Tasks_sri/Date_26_05/Form";
+import { Nav_details } from "./Tasks_sri/Date_26_05/Nav_details";
+import Login from "./Tasks_sri/Date_29_05/Login";
+import Formusing_local_session from "./Tasks_sri/Date_29_05/Formusing_local_session";
+import Home from "./Tasks_sri/Date_29_05/Home";
+import TodoList from "./Tasks_sri/Date_30_05/TodoList";
+import ListPage from "./Tasks_sri/Date_30_05/ListPage";
+import Signup from "./Training/Signup";
+import Login_traning from "./Training/Login_traning";
 
 function App() {
   return (
-    <div >
+    <div>
       {/* <Day/> */}
       {/* <PropsComp /> */}
       {/* <Date_23_05 /> */}
-    {/* <UseStateHook />       */}
-    {/* <Usestate /> */}
-    {/* {<FormValidation />} */}
-    <BrowserRouter>
-      <Routes>
-        <Route path='' element={<Routing />}></Route>
-        <Route path="/usestate" element={<Usestate />} />
+      {/* <UseStateHook />       */}
+      {/* <Usestate /> */}
+      {/* {<FormValidation />} */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="" element={<Routing />}></Route>
+          {/* <Route path="/usestate" element={<Usestate />} />
         <Route path="/day" element={<Day />} />
         <Route path="/props" element={<PropsComp />} />
         <Route path="/date" element={<Date_23_05 />} />
@@ -38,16 +42,22 @@ function App() {
         <Route path='/Form' element={<Form />}></Route>
         <Route path = "/Form_usingState" element={<Form_usingState/>}></Route>
         <Route path='/Form_clone' element={<Form_clone />}></Route>
-        <Route path='/Nav_details/:Name/:email/:phonenumber/:collegeName/:collegeState/:graduationYear/:reactNativeExperience/:javascriptExperience' element={<Nav_details/>}></Route>
-        <Route path='/Formusing_local_session' element={<Formusing_local_session/>}></Route>
+        <Route path='/Nav_details/:Name/:email/:phonenumber/:collegeName/:collegeState/:graduationYear/:reactNativeExperience/:javascriptExperience' element={<Nav_details/>}></Route> */}
+          {/* Task 29/05 */}
+          <Route path='/Formusing_local_session' element={<Formusing_local_session/>}></Route>
           <Route path='/Login' element={<Login />}></Route>
           <Route path='/Home' element={<Home/>}></Route>
-      </Routes>
-    </BrowserRouter>
-    </div>  
-    
+          {/* task 30/05 */}
+          <Route path="/TodoList" element={<TodoList />}></Route>
+          <Route path="/ListPage" element={<ListPage />}></Route>
+          {/* Training */}
+          <Route path="/Signup" element={<Signup/>}></Route>
+          <Route path="/Login_training" element={<Login_traning/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
-} 
+}
 
 export default App;
 
@@ -80,4 +90,4 @@ export default App;
 
 // What is reconciliation?
 // Reconciliation is the process by which React updates the DOM by comparing the new virtual DOM with the previous one and applying only the necessary changes.
-// 
+//

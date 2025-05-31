@@ -1,0 +1,20 @@
+.todoList_main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+}
+.input_field {
+  width: 300px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.List_main_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 900px;
+  flex-direction: column;
+}   
