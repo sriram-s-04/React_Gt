@@ -70,3 +70,10 @@
     flex-direction: column;
     gap: 10px;
 }
+.img_class{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}

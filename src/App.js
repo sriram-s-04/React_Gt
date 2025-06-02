@@ -32,7 +32,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="" element={<Routing />}></Route>
-          {/* <Route path="/usestate" element={<Usestate />} />
+          <Route path="/usestate" element={<Usestate />} />
         <Route path="/day" element={<Day />} />
         <Route path="/props" element={<PropsComp />} />
         <Route path="/date" element={<Date_23_05 />} />
@@ -42,7 +42,7 @@ function App() {
         <Route path='/Form' element={<Form />}></Route>
         <Route path = "/Form_usingState" element={<Form_usingState/>}></Route>
         <Route path='/Form_clone' element={<Form_clone />}></Route>
-        <Route path='/Nav_details/:Name/:email/:phonenumber/:collegeName/:collegeState/:graduationYear/:reactNativeExperience/:javascriptExperience' element={<Nav_details/>}></Route> */}
+        <Route path='/Nav_details' element={<Nav_details/>}></Route>
           {/* Task 29/05 */}
           <Route path='/Formusing_local_session' element={<Formusing_local_session/>}></Route>
           <Route path='/Login' element={<Login />}></Route>

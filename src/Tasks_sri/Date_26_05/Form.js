@@ -14,7 +14,9 @@ const CustomForm = () => {
     graduationYear: "",
     reactNativeExperience: 0,
     javascriptExperience: 0,
+    image: null,
   });
+
 
   function handleChange(e) {
     console.log({ ...details, [e.target.name]: e.target.value });
@@ -22,11 +24,22 @@ const CustomForm = () => {
     setDetails({ ...details, [e.target.name]: e.target.value });
   }
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setDetails((prev) => ({ ...prev, image: reader.result }));
+      };
+      reader.readAsDataURL(file);
+    }
+  };
   const navigate = useNavigate();
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/Nav_details/${details.Name}/${details.email}/${details.phonenumber}/${details.collegeName}/${details.collegeState}/${details.graduationYear}/${details.reactNativeExperience}/${details.javascriptExperience}`);
+    navigate('/Nav_details',{state: details});   
   }
 
   return (
@@ -238,7 +251,14 @@ const CustomForm = () => {
             </div>
           </div>
           <br />
-
+            <div>
+              <input
+                type="file"
+                accept="image/*"
+                className="form_input"
+                onChange={handleImageChange }
+              />
+            </div>
           <div className="form_submit">
             <Button type="submit" onClick={handleSubmit}>Submit</Button>
           </div>
