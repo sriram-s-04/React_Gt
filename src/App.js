@@ -19,6 +19,9 @@ import TodoList from "./Tasks_sri/Date_30_05/TodoList";
 import ListPage from "./Tasks_sri/Date_30_05/ListPage";
 import Signup from "./Training/Signup";
 import Login_traning from "./Training/Login_traning";
+import UseEffectHook from "./Training/UseEffectHook";
+import StopWatch from "./Tasks_sri/Date_02_06/StopWatch";
+import Live_Diffrence from "./Tasks_sri/Date_02_06/Live_Diffrence";
 
 function App() {
   return (
@@ -33,28 +36,39 @@ function App() {
         <Routes>
           <Route path="" element={<Routing />}></Route>
           <Route path="/usestate" element={<Usestate />} />
-        <Route path="/day" element={<Day />} />
-        <Route path="/props" element={<PropsComp />} />
-        <Route path="/date" element={<Date_23_05 />} />
-        <Route path="/UseLocationHook" element={<UseLocationHook />} />
-        <Route path='/UseParamsHook/:id/:name' element={<UseParamsHook />}></Route>
-        <Route path='/Useparamshook' element={<UseParamsHook />}></Route>
-        <Route path='/Form' element={<Form />}></Route>
-        <Route path = "/Form_usingState" element={<Form_usingState/>}></Route>
-        <Route path='/Form_clone' element={<Form_clone />}></Route>
-        <Route path='/Nav_details' element={<Nav_details/>}></Route>
+          <Route path="/day" element={<Day />} />
+          <Route path="/props" element={<PropsComp />} />
+          <Route path="/date" element={<Date_23_05 />} />
+          <Route path="/UseLocationHook" element={<UseLocationHook />} />
+          <Route
+            path="/UseParamsHook/:id/:name"
+            element={<UseParamsHook />}
+          ></Route>
+          <Route path="/Useparamshook" element={<UseParamsHook />}></Route>
+          <Route path="/Form" element={<Form />}></Route>
+          <Route path="/Form_usingState" element={<Form_usingState />}></Route>
+          <Route path="/Form_clone" element={<Form_clone />}></Route>
+          <Route path="/Nav_details" element={<Nav_details />}></Route>
           {/* Task 29/05 */}
-          <Route path='/Formusing_local_session' element={<Formusing_local_session/>}></Route>
-          <Route path='/Login' element={<Login />}></Route>
-          <Route path='/Home' element={<Home/>}></Route>
+          <Route
+            path="/Formusing_local_session"
+            element={<Formusing_local_session />}
+          ></Route>
+          <Route path="/Login" element={<Login />}></Route>
+          <Route path="/Home" element={<Home />}></Route>
           {/* task 30/05 */}
           <Route path="/TodoList" element={<TodoList />}></Route>
           <Route path="/ListPage" element={<ListPage />}></Route>
           {/* Training */}
-          <Route path="/Signup" element={<Signup/>}></Route>
-          <Route path="/Login_training" element={<Login_traning/>}></Route>
+          <Route path="/Signup" element={<Signup />}></Route>
+          <Route path="/Login_training" element={<Login_traning />}></Route>
+          {/* Training */}
+          <Route path="/useeffect" element={<UseEffectHook />}></Route>
+          {/* task 02/06 */}
+          <Route path="/stopwatch" element={<StopWatch />}></Route>
+          <Route path="/live_difference" element={<Live_Diffrence />}></Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter>  
     </div>
   );
 }
