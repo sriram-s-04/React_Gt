@@ -1,0 +1,36 @@
+.main{
+    background-color: #17181c;
+
+}
+.products_container{
+ display: grid;
+
+}
+.products_card{
+    border: 1px solid transparent;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.products{
+    display: grid;
+    grid-column: 2 / 3;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+.side{
+    display: grid;
+    grid-template-columns: auto 1080px auto;
+}
+.title{
+    display: grid;
+    grid-column: 2/3;
+    color: white;
+}
+.product_title,.product_price{
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}

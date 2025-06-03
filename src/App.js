@@ -22,6 +22,11 @@ import Login_traning from "./Training/Login_traning";
 import UseEffectHook from "./Training/UseEffectHook";
 import StopWatch from "./Tasks_sri/Date_02_06/StopWatch";
 import Live_Diffrence from "./Tasks_sri/Date_02_06/Live_Diffrence";
+import UseEffectwithAPI from "./Training/UseEffectwithAPI";
+import UseContextHook from "./Training/UseContextHook";
+import E_comwithAPI from "./Tasks_sri/Date_03_06/E_comwithAPI";
+import UseContext from "./Tasks_sri/Date_03_06/UseContext";
+
 
 function App() {
   return (
@@ -67,6 +72,12 @@ function App() {
           {/* task 02/06 */}
           <Route path="/stopwatch" element={<StopWatch />}></Route>
           <Route path="/live_difference" element={<Live_Diffrence />}></Route>
+           {/* Training*/}
+          <Route path="/useeffectwithapi" element={<UseEffectwithAPI />}></Route>
+          <Route path="/UseContextHook" element={<UseContextHook  />}></Route>
+          {/* task 03/06 */}
+          <Route path="/e_comwithapi" element={<E_comwithAPI/>}></Route>
+          <Route path="/UseContext" element={<UseContext/>}></Route>
         </Routes>
       </BrowserRouter>  
     </div>
