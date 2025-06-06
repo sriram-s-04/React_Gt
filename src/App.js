@@ -25,8 +25,12 @@ import Live_Diffrence from "./Tasks_sri/Date_02_06/Live_Diffrence";
 import UseEffectwithAPI from "./Training/UseEffectwithAPI";
 import UseContextHook from "./Training/UseContextHook";
 import E_comwithAPI from "./Tasks_sri/Date_03_06/E_comwithAPI";
-import UseContext from "./Tasks_sri/Date_03_06/UseContext";
-
+import UseContext from "./Tasks_sri/Date_03_06/Usecontext/UseContext";
+import Authentication_task2 from "./Tasks_sri/Date_03_06/Usecontext/Authentication_task2"
+import Language_task3 from "./Tasks_sri/Date_03_06/Usecontext/Language_task3";
+import Card_task4 from "./Tasks_sri/Date_03_06/Usecontext/Card_task4";
+import Counter_task5 from "./Tasks_sri/Date_03_06/Usecontext/Counter_task5";
+import UseReducerHook from "./Training/UseReducerHook";
 
 function App() {
   return (
@@ -78,6 +82,12 @@ function App() {
           {/* task 03/06 */}
           <Route path="/e_comwithapi" element={<E_comwithAPI/>}></Route>
           <Route path="/UseContext" element={<UseContext/>}></Route>
+          <Route path="/Authentication_task2" element={<Authentication_task2 />}></Route>
+          <Route path="/Language_task3" element={<Language_task3 />}></Route>
+          <Route path="/Card_task4" element={<Card_task4 />}></Route>
+          
+          <Route path="/Counter_task5" element={<Counter_task5 />}></Route>
+          <Route path="/UseReducerHook" element={<UseReducerHook />}></Route>
         </Routes>
       </BrowserRouter>  
     </div>

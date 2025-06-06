@@ -31,6 +31,8 @@ const E_comwithAPI = () => {
   }, []);
   return (
     <div className="main">
+
+    
       <div className="side">
         <h1 className="title">Casual Wear</h1>
         <div className="products">
@@ -51,16 +53,46 @@ const E_comwithAPI = () => {
             ))}
         </div>
       </div>
-      <div>
-        <div className="side">
-        <h1 className="title">Categories</h1>
-        </div>  
-      </div>
-      <div>
-        <div className="side">
-        <h1 className="title">Users</h1>
+
+      <div className="side">
+        <h1 className="title">Casual Wear</h1>
+        <div className="Categories">
+          {categories &&
+            categories.slice(0, 5).map((category) => (
+              // Limit to first 5 items
+              <div className="products_container">
+                <div key={category.id} className="products_card">
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    style={{ width: "200px", height: "200px" }}
+                  />
+                  <p className="product_title">{category.title}</p>
+                </div>
+              </div>
+            ))}
         </div>
       </div>
+     
+        <div className="side">
+          <h1 className="title">Users</h1>
+          <div className="users">
+            {users &&
+              users.slice(0, 3).map((user) => (
+              // Limit to first 3 items
+                <div className="products_container">
+                <div key={user.id} className="products_card">
+                  <img
+                    src={user.avatar}
+                    alt={user.name}
+                    style={{ width: "200px", height: "200px"}}
+                  />
+                  <p className="product_title">{user.name}</p>
+                </div>
+                </div>
+              ))}
+          </div>
+        </div>
     </div>
   );
 };
