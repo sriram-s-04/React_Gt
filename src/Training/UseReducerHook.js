@@ -14,7 +14,7 @@ function UseReducerHook() {
 
         switch(action.type){
             case "INC":
-                return {count:state.count+1}
+                return {count:state.count+action.input}
             case "DEC":
                 return {count:state.count-1}
 
@@ -32,7 +32,7 @@ function UseReducerHook() {
 
   return (
     <div>UseReducerHook
-        <button onClick={() => dispatch({type:"INC"})}>+</button>
+        <button onClick={() => dispatch({type:"INC",input:2})}>+</button>
         {state.count}
         <button onClick={() => dispatch({type:"DEC"})}>-</button>
     </div>

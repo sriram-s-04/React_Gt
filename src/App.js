@@ -31,6 +31,13 @@ import Language_task3 from "./Tasks_sri/Date_03_06/Usecontext/Language_task3";
 import Card_task4 from "./Tasks_sri/Date_03_06/Usecontext/Card_task4";
 import Counter_task5 from "./Tasks_sri/Date_03_06/Usecontext/Counter_task5";
 import UseReducerHook from "./Training/UseReducerHook";
+import Useraducetasks from "./Tasks_sri/Date_05_06/Useraducetasks";
+import URtask1 from "./Tasks_sri/Date_05_06/URtask1";
+import URtask2 from "./Tasks_sri/Date_05_06/URtask2";
+import URtask3 from "./Tasks_sri/Date_05_06/URtask3";
+import URtask4 from "./Tasks_sri/Date_05_06/URtask4";
+import Cart from "./Tasks_sri/Date_03_06/Cart";
+import UseRefHook from "./Training/UseRefHook";
 
 function App() {
   return (
@@ -81,6 +88,7 @@ function App() {
           <Route path="/UseContextHook" element={<UseContextHook  />}></Route>
           {/* task 03/06 */}
           <Route path="/e_comwithapi" element={<E_comwithAPI/>}></Route>
+          <Route path="/Cart" element={<Cart/>}></Route>
           <Route path="/UseContext" element={<UseContext/>}></Route>
           <Route path="/Authentication_task2" element={<Authentication_task2 />}></Route>
           <Route path="/Language_task3" element={<Language_task3 />}></Route>
@@ -88,6 +96,13 @@ function App() {
           
           <Route path="/Counter_task5" element={<Counter_task5 />}></Route>
           <Route path="/UseReducerHook" element={<UseReducerHook />}></Route>
+          {/* task 05/06 */}
+          <Route path="/Useraducetasks" element={<Useraducetasks/>}></Route>
+          <Route path="/URtask1" element={<URtask1/>}></Route>
+          <Route path="/URtask2" element={<URtask2/>}></Route>
+          <Route path="/URtask3" element={<URtask3/>}></Route>
+          <Route path="/URtask4" element={<URtask4/>}></Route>
+          <Route path="/UseRefHook" element={<UseRefHook/>}></Route>
         </Routes>
       </BrowserRouter>  
     </div>
