@@ -38,7 +38,9 @@ import URtask3 from "./Tasks_sri/Date_05_06/URtask3";
 import URtask4 from "./Tasks_sri/Date_05_06/URtask4";
 import Cart from "./Tasks_sri/Date_03_06/Cart";
 import UseRefHook from "./Training/UseRefHook";
-
+import UseRef from "./Tasks_sri/Date_13_06/UseRef";
+import DataTableComp from "./Training/DataTableComp";
+import DataTableTask from "./Tasks_sri/Date_13_06/DataTableTask";
 function App() {
   return (
     <div>
@@ -103,6 +105,9 @@ function App() {
           <Route path="/URtask3" element={<URtask3/>}></Route>
           <Route path="/URtask4" element={<URtask4/>}></Route>
           <Route path="/UseRefHook" element={<UseRefHook/>}></Route>
+          <Route path="/UseRef" element={<UseRef/>}></Route>
+          <Route path="/DataTableComp" element={<DataTableComp/>}></Route>
+          <Route path="/DataTable" element={<DataTableTask/>}></Route>
         </Routes>
       </BrowserRouter>  
     </div>
