@@ -41,6 +41,10 @@ import UseRefHook from "./Training/UseRefHook";
 import UseRef from "./Tasks_sri/Date_13_06/UseRef";
 import DataTableComp from "./Training/DataTableComp";
 import DataTableTask from "./Tasks_sri/Date_13_06/DataTableTask";
+import CRUDoperation from "./Tasks_sri/Date_14_06/CRUDoperation";
+import DataTablewithAPI from "./Training/DataTablewithAPI";
+import { FormForAPI } from "./Training/FormForAPI";
+import CRUDWithImage from "./Tasks_sri/Date_14_06/CRUDWithImage";
 function App() {
   return (
     <div>
@@ -108,6 +112,10 @@ function App() {
           <Route path="/UseRef" element={<UseRef/>}></Route>
           <Route path="/DataTableComp" element={<DataTableComp/>}></Route>
           <Route path="/DataTable" element={<DataTableTask/>}></Route>
+          <Route path="/CRUDoperation" element={<CRUDoperation/>}></Route>
+          <Route path="/DataTablewithAPI" element={<DataTablewithAPI/>}></Route>
+          <Route path="/FormForAPI" element={<FormForAPI/>}></Route>
+          <Route path="/CRUDWithImage" element={<CRUDWithImage/>}></Route>
         </Routes>
       </BrowserRouter>  
     </div>
