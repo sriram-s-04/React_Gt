@@ -45,6 +45,9 @@ import CRUDoperation from "./Tasks_sri/Date_14_06/CRUDoperation";
 import DataTablewithAPI from "./Training/DataTablewithAPI";
 import { FormForAPI } from "./Training/FormForAPI";
 import CRUDWithImage from "./Tasks_sri/Date_14_06/CRUDWithImage";
+import GoogleAuth from "./Tasks_sri/Date_16_06/GoogleAuth";
+import Registration from "./Tasks_sri/Date_16_06/Registration";
+import GoogleHome from "./Tasks_sri/Date_16_06/GoogleHome";
 function App() {
   return (
     <div>
@@ -116,6 +119,9 @@ function App() {
           <Route path="/DataTablewithAPI" element={<DataTablewithAPI/>}></Route>
           <Route path="/FormForAPI" element={<FormForAPI/>}></Route>
           <Route path="/CRUDWithImage" element={<CRUDWithImage/>}></Route>
+          <Route path="/GoogleAuth" element={<GoogleAuth/>}></Route>
+          <Route path="/Registration" element={<Registration />} />
+          <Route path="/GoogleHome" element={<GoogleHome />} />
         </Routes>
       </BrowserRouter>  
     </div>
