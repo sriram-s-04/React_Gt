@@ -3,7 +3,8 @@ import { useLocation } from 'react-router-dom';
 
 const GoogleHome = () => {
     const {  user } = useLocation().state || {}; // Get user data from state if available
-  return (
+  console.log(user);  
+    return (
     <div>
       <h1>Welcome to Google Home</h1>
       {user && (

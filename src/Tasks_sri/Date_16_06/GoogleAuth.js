@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import {
   signInWithPopup,
-  createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from 'firebase/auth';
 import { auth, provider } from '../../firebaseconfig'; // Adjust the import path
@@ -22,7 +21,8 @@ const GoogleAuth = () => {
       .then((result) => {
         const user = result.user;
         console.log('Google Sign-In:', user);
-        nav('/GoogleHome', { state: { user } }  ); // Navigate after login
+        localStorage.setItem('user', JSON.stringify(user)); // Store user data in localStorage
+        nav('/GoogleHome'); // Navigate after login
       })
       .catch((error) => {
         console.error('Google sign-in error:', error.message);

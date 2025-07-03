@@ -48,6 +48,8 @@ import CRUDWithImage from "./Tasks_sri/Date_14_06/CRUDWithImage";
 import GoogleAuth from "./Tasks_sri/Date_16_06/GoogleAuth";
 import Registration from "./Tasks_sri/Date_16_06/Registration";
 import GoogleHome from "./Tasks_sri/Date_16_06/GoogleHome";
+import { Provider } from "react-redux";
+import store from "./redux/Store";
 function App() {
   return (
     <div>
@@ -57,6 +59,7 @@ function App() {
       {/* <UseStateHook />       */}
       {/* <Usestate /> */}
       {/* {<FormValidation />} */}
+      <Provider store={store}>
       <BrowserRouter>
         <Routes>
           <Route path="" element={<Routing />}></Route>
@@ -124,6 +127,7 @@ function App() {
           <Route path="/GoogleHome" element={<GoogleHome />} />
         </Routes>
       </BrowserRouter>  
+      </Provider>
     </div>
   );
 }

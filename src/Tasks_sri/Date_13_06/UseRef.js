@@ -27,10 +27,10 @@ const UseRef = () => {
 * When the button is clicked, the input should be focused using `useRef`.
 
 --- */}
-    {/* <input ref={inputRef} type="text" />
+    <input ref={inputRef} type="text" />
     <button onClick={focusInput}>Focus Input</button>
     <br />
-    <br/> */}
+    <br/>
 
 {/* ### ðŸ”¹ Task 2: Get Input Value Without Re-render
 
@@ -38,8 +38,8 @@ const UseRef = () => {
 * Add a button to alert the current input value without using `useState`.
 
 --- */}
-    {/* <input ref={inputRef} type="text" />
-    <button onClick={() => alert(inputRef.current.value)}>Show Input Value</button> */}
+    <input ref={inputRef} type="text" />
+    <button onClick={() => alert(inputRef.current.value)}>Show Input Value</button>
 
 {/* ### ðŸ”¹ Task 3: Count Button Clicks Without Re-rendering
 
@@ -47,10 +47,10 @@ const UseRef = () => {
 * Display the count only in the console, not in the UI.
 
 --- */}
-    {/* <button onClick={() => {
+    <button onClick={() => {
       inputRef.current.count = (inputRef.current.count || 0) + 1;
       console.log(`Button clicked ${inputRef.current.count} times`);
-    }}>Click Me</button> */}
+    }}>Click Me</button>
 
 {/* 
 ### ðŸ”¹ Task 4: Scroll to a Section
@@ -72,9 +72,9 @@ const UseRef = () => {
 * Use `useRef` to disable an input on one button click and enable it on another.
 
 --- */}
-    {/* <input ref={inputRef} type="text" />
+    <input ref={inputRef} type="text" />
     <button onClick={() => inputRef.current.disabled = true}>Disable Input</button>
-    <button onClick={() => inputRef.current.disabled = false}>Enable Input</button> */}
+    <button onClick={() => inputRef.current.disabled = false}>Enable Input</button>
 
 {/* ### ðŸ”¹ Task 6: Store Previous State Value
 

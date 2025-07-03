@@ -45,7 +45,7 @@ const CRUDWithImage = () => {
                     title: '',
                     content: ''
                 });
-            });
+            });     
     }
     else {
         const formDataToSend = new FormData();

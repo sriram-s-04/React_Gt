@@ -1,15 +1,17 @@
 import { Formik } from "formik";
-import { useState } from "react";
 import { Form } from "react-bootstrap";
 import * as yup from "yup";
 import Button from "react-bootstrap/Button";
 import "./Todo.css";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addTodo } from "../../redux/slice/TodoSlice";
 
 const TodoList = () => {
-  const [Tasks, setTasks] = useState({task:""});
-  const [taskList, setTaskList] = useState([])
+  // const [Tasks, setTasks] = useState({task:""});
+  // const [taskList, setTaskList] = useState([])
   // Validation schema using Yup for form validation
+  const location =useLocation();
   const schema = yup.object().shape({
     task: yup.string().required("Task is required"),
   });
@@ -18,24 +20,25 @@ const TodoList = () => {
   // Function to handle form submission
   // It saves the task to localStorage and sessionStorage
   const nav = useNavigate();
+  //redux
+  const dispatch = useDispatch();
+  const Todo = useSelector((state) => state.todo.task);
   const handleSubmit = (values) => {
-    let list = JSON.parse( localStorage.getItem("task")) || []
-    let updated_list = [...list,values.task]
-    // setTaskList(updated_list)
-    console.log(updated_list);
+    const newTask = { id: Date.now(), task: values.task, completed: false };
+
+    dispatch(addTodo(newTask));
+    console.log("values", values);
     
-    localStorage.setItem("task", JSON.stringify(updated_list));
-    sessionStorage.setItem("task", JSON.stringify(updated_list));
-    nav("/ListPage")
+    nav("/ListPage");
     
     
   };
 
   return (  
     <>
-      <div className="todoList_main_container">
+      <div className="todoList_main_containter">
         <Formik
-          initialValues={Tasks}
+          initialValues={Todo}
           validationSchema={schema}
           enableReinitialize
           onSubmit={(values, { resetForm }) => {
@@ -54,6 +57,7 @@ const TodoList = () => {
                     placeholder="enter the new task"
                     onChange={handleChange}
                     name="task"
+                    required
                     className="input_field"
                   />
                   <br />
